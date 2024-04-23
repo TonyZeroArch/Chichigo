@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WEB-115 Final Project</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="ProjectJS1.js"></script>
+    </head>
+
+    <body>
+        <header class="teal lighten-2">
+            <h5 class="center-align white-text">Build Your Meal Plan</h5>
+            <p class="center-align">By Sheng Sun From WEB-115-0002</p>
+        </header>
+
+        <main>
+            <div class="container">
+                <form id="meal-plan-form">
+                    <div class="row">
+                        <div class="col s12">
+                            <h5 class="center-align">Personal Information</h5>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="name" type="text" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="email" type="email" required>
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea id="goal" class="materialize-textarea" required></textarea>
+                            <label for="goal">This Week's Goal</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s12">
+                            <h5 class="center-align">Weekly Meal Planner</h5>
+                        </div>
+                        <div class="col s6">
+                            <label>Breakfast</label>
+                            <input id="breakfast" type="text" required>
+                        </div>
+                        <div class="col s6">
+                            <label>Lunch</label>
+                            <input id="lunch" type="text" required>
+                        </div>
+                        <div class="col s6">
+                            <label>Snack 1</label>
+                            <input id="snack1" type="text" required>
+                        </div>
+                        <div class="col s6">
+                            <label>Dinner</label>
+                            <input id="dinner" type="text" required>
+                        </div>
+                        <div class="col s6">
+                            <label>Snack 2</label>
+                            <input id="snack2" type="text" required>
+                        </div>
+                    </div>
+
+                    <div class="row center-align">
+                        <button class="btn waves-effect waves-light" type="submit">Generate Meal Plan</button>
+                        <button class="btn waves-effect waves-light" type="button" id="clear-btn">Clear Plan</button>
+                        <a class="btn waves-effect waves-light" href="#" id="print-btn" disabled>Print/Download</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+
+    </body>
+
+</html>
