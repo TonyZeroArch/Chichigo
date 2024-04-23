@@ -5,79 +5,74 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WEB-115 Final Project</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="ProjectJS1.js"></script>
     </head>
 
     <body>
-        <h2>Submit Form</h2>
-        <form action="/submit" method="POST">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br><br>
+        <header class="teal lighten-2">
+            <h5 class="center-align white-text">Build Your Meal Plan</h5>
+            <p class="center-align">By Sheng Sun From WEB-115-0002</p>
+        </header>
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br><br>
+        <main>
+            <div class="container">
+                <form id="meal-plan-form">
+                    <div class="row">
+                        <div class="col s12">
+                            <h5 class="center-align">Personal Information</h5>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="name" type="text" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="email" type="email" required>
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea id="goal" class="materialize-textarea" required></textarea>
+                            <label for="goal">This Week's Goal</label>
+                        </div>
+                    </div>
 
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message"></textarea><br><br>
+                    <div class="row">
+                        <div class="col s12">
+                            <h5 class="center-align">Weekly Meal Planner</h5>
+                        </div>
+                        <div class="col s6">
+                            <label>Breakfast</label>
+                            <input id="breakfast" type="text" required>
+                        </div>
+                        <div class="col s6">
+                            <label>Lunch</label>
+                            <input id="lunch" type="text" required>
+                        </div>
+                        <div class="col s6">
+                            <label>Snack 1</label>
+                            <input id="snack1" type="text" required>
+                        </div>
+                        <div class="col s6">
+                            <label>Dinner</label>
+                            <input id="dinner" type="text" required>
+                        </div>
+                        <div class="col s6">
+                            <label>Snack 2</label>
+                            <input id="snack2" type="text" required>
+                        </div>
+                    </div>
 
-            <table>
-                <tr>
-                    <th>Column 1</th>
-                    <th>Column 2</th>
-                    <th>Column 3</th>
-                    <th>Column 4</th>
-                    <th>Column 5</th>
-                    <th>Column 6</th>
-                    <th>Column 7</th>
-                </tr>
-                <tr>
-                    <td>Row 1, Column 1</td>
-                    <td>Row 1, Column 2</td>
-                    <td>Row 1, Column 3</td>
-                    <td>Row 1, Column 4</td>
-                    <td>Row 1, Column 5</td>
-                    <td>Row 1, Column 6</td>
-                    <td>Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td>Row 2, Column 1</td>
-                    <td>Row 2, Column 2</td>
-                    <td>Row 2, Column 3</td>
-                    <td>Row 2, Column 4</td>
-                    <td>Row 2, Column 5</td>
-                    <td>Row 2, Column 6</td>
-                    <td>Row 2, Column 7</td>
-                </tr>
-                <tr>
-                    <td>Row 3, Column 1</td>
-                    <td>Row 3, Column 2</td>
-                    <td>Row 3, Column 3</td>
-                    <td>Row 3, Column 4</td>
-                    <td>Row 3, Column 5</td>
-                    <td>Row 3, Column 6</td>
-                    <td>Row 3, Column 7</td>
-                </tr>
-                <tr>
-                    <td>Row 4, Column 1</td>
-                    <td>Row 4, Column 2</td>
-                    <td>Row 4, Column 3</td>
-                    <td>Row 4, Column 4</td>
-                    <td>Row 4, Column 5</td>
-                    <td>Row 4, Column 6</td>
-                    <td>Row 4, Column 7</td>
-                </tr>
-                <tr>
-                    <td>Row 5, Column 1</td>
-                    <td>Row 5, Column 2</td>
-                    <td>Row 5, Column 3</td>
-                    <td>Row 5, Column 4</td>
-                    <td>Row 5, Column 5</td>
-                    <td>Row 5, Column 6</td>
-                    <td>Row 5, Column 7</td>
-                </tr>
-            </table>
+                    <div class="row center-align">
+                        <button class="btn waves-effect waves-light" type="submit">Generate Meal Plan</button>
+                        <button class="btn waves-effect waves-light" type="button" id="clear-btn">Clear Plan</button>
+                        <a class="btn waves-effect waves-light" href="#" id="print-btn" disabled>Print/Download</a>
+                    </div>
+                </form>
+            </div>
+        </main>
 
-            <input type="submit" value="Submit">
-        </form>
+
     </body>
 
 </html>
