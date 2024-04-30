@@ -7,13 +7,20 @@
         <title>WEB-115 Final Project</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="ProjectJS1.js"></script>
+        <script src="ProjectJS.js" defer ></script>
     </head>
 
     <body>
         <header class="teal lighten-2">
-            <h5 class="center-align white-text">Build Your Meal Plan</h5>
-            <p class="center-align">By Sheng Sun From WEB-115-0002</p>
+            <table>
+                <tr>
+                    <td class="left-align"><img src="bar.jpg" alt="Picture Bar" class="left-align" height="200"> </td>
+                    <td class="left-align">
+                        <h2 class="left-align white-text">Build Your Meal Plan</h2>
+                        <p class="center-align">By Sheng Sun From WEB-115-0002</p>
+                    </td>
+                </tr>
+            </table>
         </header>
 
         <main>
@@ -41,33 +48,50 @@
                         <div class="col s12">
                             <h5 class="center-align">Weekly Meal Planner</h5>
                         </div>
+
                         <div class="col s6">
                             <label>Breakfast</label>
                             <input id="breakfast" type="text" required>
-                        </div>
-                        <div class="col s6">
-                            <label>Lunch</label>
-                            <input id="lunch" type="text" required>
                         </div>
                         <div class="col s6">
                             <label>Snack 1</label>
                             <input id="snack1" type="text" required>
                         </div>
                         <div class="col s6">
-                            <label>Dinner</label>
-                            <input id="dinner" type="text" required>
+                            <label>Lunch</label>
+                            <input id="lunch" type="text" required>
                         </div>
                         <div class="col s6">
                             <label>Snack 2</label>
                             <input id="snack2" type="text" required>
                         </div>
+                        <div class="col s6">
+                            <label>Dinner</label>
+                            <input id="dinner" type="text" required>
+                        </div>
                     </div>
 
+
+                    <!-- <script>
+                        window.onload = function () {
+                            document.getElementById("name").value = "Meal Plan";
+                            document.getElementById("goal").value = "My goal";
+                            document.getElementById("breakfast").value = 'Oreal';
+                            document.getElementById("lunch").value = 'Chicken Salad';
+                            document.getElementById("snack1").value = 'Apple';
+                            document.getElementById("dinner").value = 'Sushi';
+                            document.getElementById("snack2").value = 'Pear';
+                            document.getElementById("email").value = 'abc@gmail.com';
+                            }
+
+                    </script> -->
+
                     <div class="row center-align">
-                        <button class="btn waves-effect waves-light" type="submit">Generate Meal Plan</button>
-                        <button class="btn waves-effect waves-light" type="button" id="clear-btn">Clear Plan</button>
-                        <a class="btn waves-effect waves-light" href="#" id="print-btn" disabled>Print/Download</a>
+                        <button class="btn waves-effect waves-light" type="submit" id="gen-btn" onclick="myCreatePlan()">Generate Meal Plan</button>
+                        <button class="btn waves-effect waves-light" type="button" id="clear-btn" onclick="myClear()">Clear Plan</button>
+
                     </div>
+
                 </form>
             </div>
         </main>
